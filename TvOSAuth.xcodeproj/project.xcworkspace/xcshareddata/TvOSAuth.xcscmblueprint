@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : 0,
+    "38D9009B322140394B9DA7467F68950B56B35FF5" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72412A0E-B066-4ABB-9E09-2494F6DABB50",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : "TvOSAuth\/JSONJoy-Swift\/",
+    "38D9009B322140394B9DA7467F68950B56B35FF5" : "TvOSAuth\/SwiftHTTP\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TvOSAuth",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TvOSAuth.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daltoniam\/JSONJoy-Swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05739DDC11775AAEB69D4CC8381F0BE76BE7247D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daltoniam\/SwiftHTTP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38D9009B322140394B9DA7467F68950B56B35FF5"
+    }
+  ]
+}

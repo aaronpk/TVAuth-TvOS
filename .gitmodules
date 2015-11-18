@@ -1,0 +1,6 @@
+[submodule "SwiftHTTP"]
+	path = SwiftHTTP
+	url = https://github.com/daltoniam/SwiftHTTP.git
+[submodule "JSONJoy-Swift"]
+	path = JSONJoy-Swift
+	url = https://github.com/daltoniam/JSONJoy-Swift.git
