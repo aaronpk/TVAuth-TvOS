@@ -8,6 +8,9 @@
 
 import UIKit
 
+let kAccessTokenDefaults = "access_token"
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

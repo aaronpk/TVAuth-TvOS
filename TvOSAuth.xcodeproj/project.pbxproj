@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F463AB21BFCFB2E008F0BFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F463AB11BFCFB2E008F0BFC /* LoginViewController.swift */; };
+		0F463ABA1BFD1A63008F0BFC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F463AB91BFD1A63008F0BFC /* Config.swift */; };
+		0F463ABC1BFD2D3B008F0BFC /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F463ABB1BFD2D3B008F0BFC /* APIResponses.swift */; };
 		0F90ADA01BF854160065A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F90AD9F1BF854160065A2BC /* AppDelegate.swift */; };
 		0F90ADA21BF854160065A2BC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F90ADA11BF854160065A2BC /* FirstViewController.swift */; };
 		0F90ADA41BF854160065A2BC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F90ADA31BF854160065A2BC /* SecondViewController.swift */; };
@@ -90,6 +93,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F463AB11BFCFB2E008F0BFC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0F463AB91BFD1A63008F0BFC /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		0F463ABB1BFD2D3B008F0BFC /* APIResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
 		0F90AD9C1BF854160065A2BC /* TvOSAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvOSAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F90AD9F1BF854160065A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F90ADA11BF854160065A2BC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -134,9 +140,12 @@
 		0F90AD9E1BF854160065A2BC /* TvOSAuth */ = {
 			isa = PBXGroup;
 			children = (
+				0F463AB91BFD1A63008F0BFC /* Config.swift */,
 				0F90AD9F1BF854160065A2BC /* AppDelegate.swift */,
 				0F90ADA11BF854160065A2BC /* FirstViewController.swift */,
 				0F90ADA31BF854160065A2BC /* SecondViewController.swift */,
+				0F463AB11BFCFB2E008F0BFC /* LoginViewController.swift */,
+				0F463ABB1BFD2D3B008F0BFC /* APIResponses.swift */,
 				0F90ADA51BF854160065A2BC /* Main.storyboard */,
 				0F90ADA81BF854160065A2BC /* Assets.xcassets */,
 				0F90ADAA1BF854160065A2BC /* Info.plist */,
@@ -316,9 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F463AB21BFCFB2E008F0BFC /* LoginViewController.swift in Sources */,
 				0F90ADA41BF854160065A2BC /* SecondViewController.swift in Sources */,
+				0F463ABA1BFD1A63008F0BFC /* Config.swift in Sources */,
 				0F90ADA01BF854160065A2BC /* AppDelegate.swift in Sources */,
 				0F90ADA21BF854160065A2BC /* FirstViewController.swift in Sources */,
+				0F463ABC1BFD2D3B008F0BFC /* APIResponses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

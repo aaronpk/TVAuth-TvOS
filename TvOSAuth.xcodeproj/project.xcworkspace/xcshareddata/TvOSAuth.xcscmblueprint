@@ -1,13 +1,16 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B5B702B0D17133153A4ACBBA54932D5D54BC5B95",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B5B702B0D17133153A4ACBBA54932D5D54BC5B95" : 0,
     "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : 0,
     "38D9009B322140394B9DA7467F68950B56B35FF5" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "72412A0E-B066-4ABB-9E09-2494F6DABB50",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B5B702B0D17133153A4ACBBA54932D5D54BC5B95" : "TVAuth-TvOS\/",
     "05739DDC11775AAEB69D4CC8381F0BE76BE7247D" : "TvOSAuth\/JSONJoy-Swift\/",
     "38D9009B322140394B9DA7467F68950B56B35FF5" : "TvOSAuth\/SwiftHTTP\/"
   },
@@ -24,6 +27,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/daltoniam\/SwiftHTTP.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38D9009B322140394B9DA7467F68950B56B35FF5"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:aaronpk\/TVAuth-TvOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B5B702B0D17133153A4ACBBA54932D5D54BC5B95"
     }
   ]
 }

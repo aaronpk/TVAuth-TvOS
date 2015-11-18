@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9060" systemVersion="15A284" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -38,7 +38,7 @@
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="signInWasTapped:" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="bno-JD-u5v"/>
+                                    <segue destination="B4r-qh-KC8" kind="presentation" id="VHa-wV-GZ4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,6 +59,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2246" y="-640"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="dYn-6M-bum">
+            <objects>
+                <viewController id="B4r-qh-KC8" customClass="LoginViewController" customModule="TvOSAuth" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zkk-vl-1hM"/>
+                        <viewControllerLayoutGuide type="bottom" id="yLk-Mi-mB9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ORn-oD-wr3">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Activate This Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZN-3v-7tM">
+                                <rect key="frame" x="693" y="156" width="533" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZH-4E-Rh9">
+                                <rect key="frame" x="552" y="300" width="817" height="39"/>
+                                <string key="text">1. Go to the URL below on your computer or mobile device
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connecting..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5a-xA-Zly">
+                                <rect key="frame" x="552" y="520" width="817" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLs-nh-Hd4">
+                                <rect key="frame" x="620" y="355" width="678" height="39"/>
+                                <string key="text">2. When prompted, enter the code shown below
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-Zp-3Gc">
+                                <rect key="frame" x="693" y="643" width="533" height="153"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="128"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mFo-C0-YIh">
+                                <rect key="frame" x="927" y="861" width="64" height="64"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="example.com/device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-vQ-DQF">
+                                <rect key="frame" x="232" y="463" width="1456" height="153"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wtB-Zp-3Gc" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="0db-bo-Fjh"/>
+                            <constraint firstItem="bZN-3v-7tM" firstAttribute="top" secondItem="zkk-vl-1hM" secondAttribute="bottom" constant="156" id="2uE-sz-c4k"/>
+                            <constraint firstItem="SLs-nh-Hd4" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="5bA-tB-tb7"/>
+                            <constraint firstItem="v5a-xA-Zly" firstAttribute="centerY" secondItem="ORn-oD-wr3" secondAttribute="centerY" id="9A8-Mn-jfz"/>
+                            <constraint firstItem="n8s-vQ-DQF" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="DmB-fT-V9i"/>
+                            <constraint firstItem="SLs-nh-Hd4" firstAttribute="top" secondItem="rZH-4E-Rh9" secondAttribute="bottom" constant="16" id="DzB-qO-x6Y"/>
+                            <constraint firstItem="bZN-3v-7tM" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="GDT-Uw-Gzp"/>
+                            <constraint firstItem="rZH-4E-Rh9" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="LGw-dk-QLT"/>
+                            <constraint firstItem="v5a-xA-Zly" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="NxY-8s-oXJ"/>
+                            <constraint firstItem="wtB-Zp-3Gc" firstAttribute="top" secondItem="n8s-vQ-DQF" secondAttribute="bottom" constant="27" id="T89-N7-PvB"/>
+                            <constraint firstItem="n8s-vQ-DQF" firstAttribute="top" secondItem="SLs-nh-Hd4" secondAttribute="bottom" constant="69" id="dRG-Ai-JBF"/>
+                            <constraint firstItem="rZH-4E-Rh9" firstAttribute="top" secondItem="bZN-3v-7tM" secondAttribute="bottom" constant="93" id="dxp-6S-U9t"/>
+                            <constraint firstItem="mFo-C0-YIh" firstAttribute="top" secondItem="wtB-Zp-3Gc" secondAttribute="bottom" constant="65" id="wCM-Bt-0Nd"/>
+                            <constraint firstItem="mFo-C0-YIh" firstAttribute="centerX" secondItem="ORn-oD-wr3" secondAttribute="centerX" id="wJx-UP-VEB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectingMsg" destination="v5a-xA-Zly" id="i1l-bX-5wQ"/>
+                        <outlet property="msg1" destination="rZH-4E-Rh9" id="JEh-RO-BAH"/>
+                        <outlet property="msg2" destination="SLs-nh-Hd4" id="Bql-kU-iHv"/>
+                        <outlet property="spinner" destination="mFo-C0-YIh" id="kKZ-IT-fgA"/>
+                        <outlet property="userCode" destination="wtB-Zp-3Gc" id="t0i-d1-Qt2"/>
+                        <outlet property="verificationURL" destination="n8s-vQ-DQF" id="vSv-Pv-hks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFW-tr-iy0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4340" y="-487"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
