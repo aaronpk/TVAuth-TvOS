@@ -55,6 +55,12 @@ class LoginViewController : UIViewController {
         }
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        if(self.tokenTimer != nil) {
+            self.tokenTimer.invalidate()
+        }
+    }
+    
     func showUserCode(code: CodeResponse) {
         self.code = code
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
@@ -79,12 +85,13 @@ class LoginViewController : UIViewController {
     func checkForTokenAfterDelay() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
-                NSTimer.scheduledTimerWithTimeInterval((Double)(self.code.interval!), target: self, selector: "requestAccessToken", userInfo: nil, repeats: false)
+                self.tokenTimer = NSTimer.scheduledTimerWithTimeInterval((Double)(self.code.interval!), target: self, selector: "requestAccessToken", userInfo: nil, repeats: false)
             }
         }
     }
     
     func dismissLoginScreen() {
+        print("dismissing login screen")
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
                 self.dismissViewControllerAnimated(true, completion:nil)
