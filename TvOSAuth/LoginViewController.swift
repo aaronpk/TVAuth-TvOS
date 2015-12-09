@@ -72,7 +72,7 @@ class LoginViewController : UIViewController {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
                 // update the UI on the main thread
-                self.verificationURL.text = code.verification_uri
+                self.verificationURL.text = code.verification_uri?.stringByReplacingOccurrencesOfString("https://", withString: "")
                 self.userCode.text = code.user_code
                 
                 self.connectingMsg.hidden = true
