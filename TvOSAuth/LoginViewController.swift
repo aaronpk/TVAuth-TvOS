@@ -19,6 +19,7 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     var tokenTimer: NSTimer!
+    var interval: Int!
     var code: CodeResponse!
     
     override func viewWillAppear(animated: Bool) {
@@ -31,6 +32,16 @@ class LoginViewController : UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        requestUserCode()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        if(self.tokenTimer != nil) {
+            self.tokenTimer.invalidate()
+        }
+    }
+    
+    func requestUserCode() {
         // Make an HTTP request to request a device code
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             let params = [
@@ -41,6 +52,7 @@ class LoginViewController : UIViewController {
                 let opt = try HTTP.POST(OAuthDeviceCodeEndpoint, parameters: params)
                 opt.start { response in
                     let code = CodeResponse(JSONDecoder(response.data))
+                    self.interval = code.interval
                     if let user_code = code.user_code {
                         print("got user code: \(user_code)")
                         print(code)
@@ -52,12 +64,6 @@ class LoginViewController : UIViewController {
             } catch let error {
                 print("got an error creating the request: \(error)")
             }
-        }
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        if(self.tokenTimer != nil) {
-            self.tokenTimer.invalidate()
         }
     }
     
@@ -83,9 +89,10 @@ class LoginViewController : UIViewController {
     }
     
     func checkForTokenAfterDelay() {
+        print("Waiting for \(self.interval)")
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
-                self.tokenTimer = NSTimer.scheduledTimerWithTimeInterval((Double)(self.code.interval!), target: self, selector: "requestAccessToken", userInfo: nil, repeats: false)
+                self.tokenTimer = NSTimer.scheduledTimerWithTimeInterval((Double)(self.interval!), target: self, selector: "requestAccessToken", userInfo: nil, repeats: false)
             }
         }
     }
@@ -116,10 +123,12 @@ class LoginViewController : UIViewController {
                         if error == "authorization_pending" {
                             // keep polling
                             self.checkForTokenAfterDelay()
-
+                        } else if error == "slow_down" {
+                            self.interval = Int(Double(self.interval) * 1.5);
+                            self.checkForTokenAfterDelay()
                         } else {
-                            print("stopping polling")
-                            self.dismissLoginScreen()
+                            print("timed out waiting for user to log in, getting a new device token")
+                            self.requestUserCode()
                         }
                     } else if token.access_token != nil {
                         print("got an access token! \(token.access_token)")

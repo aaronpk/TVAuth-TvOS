@@ -7,5 +7,5 @@
 //
 
 let OAuthClientID = "Cdk0dzPrsljHRy6z"
-let OAuthDeviceCodeEndpoint = "https://tvauth.pin13.net/device/code"
-let OAuthTokenEndpoint = "https://tvauth.pin13.net/device/token"
+let OAuthDeviceCodeEndpoint = "https://tv.oauth.com/device/code"
+let OAuthTokenEndpoint = "https://tv.oauth.com/device/token"
