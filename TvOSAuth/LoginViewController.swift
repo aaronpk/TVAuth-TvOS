@@ -119,7 +119,7 @@ class LoginViewController : UIViewController {
                 opt.start { response in
                     let token = TokenResponse(JSONDecoder(response.data))
                     if let error = token.error {
-                        print("got status: \(error)")
+                        print("got status: \(error) \(token.error_description)")
                         if error == "authorization_pending" {
                             // keep polling
                             self.checkForTokenAfterDelay()
@@ -133,6 +133,8 @@ class LoginViewController : UIViewController {
                     } else if token.access_token != nil {
                         print("got an access token! \(token.access_token)")
                         NSUserDefaults.standardUserDefaults().setObject(token.access_token, forKey: kAccessTokenDefaults)
+                        NSUserDefaults.standardUserDefaults().setObject(token.username, forKey: kUsernameDefaults)
+                        NSUserDefaults.standardUserDefaults().setBool(true, forKey: kLoginCompleted)
                         print("stopping polling")
                         self.dismissLoginScreen()
                     } else {

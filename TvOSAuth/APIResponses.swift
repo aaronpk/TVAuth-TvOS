@@ -23,12 +23,14 @@ struct CodeResponse: JSONJoy {
 
 struct TokenResponse: JSONJoy {
     let error: String?
+    let error_description: String?
     let access_token: String?
     let expires_in: Int?
     let username: String?
     let refresh_token: String?
     init(_ decoder: JSONDecoder) {
         error = decoder["error"].string
+        error_description = decoder["error_description"].string
         access_token = decoder["access_token"].string
         expires_in = decoder["expires_in"].integer
         username = decoder["username"].string

@@ -15,6 +15,8 @@
 		0F90ADA41BF854160065A2BC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F90ADA31BF854160065A2BC /* SecondViewController.swift */; };
 		0F90ADA71BF854160065A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F90ADA51BF854160065A2BC /* Main.storyboard */; };
 		0F90ADA91BF854160065A2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F90ADA81BF854160065A2BC /* Assets.xcassets */; };
+		0FA2B1A41C18EDFE0017242D /* AGOResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2B1A31C18EDFE0017242D /* AGOResponses.swift */; };
+		0FA2B1A61C18F66C0017242D /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA2B1A51C18F66C0017242D /* ItemTableViewCell.swift */; };
 		0FFF981D1BFCE4D60053BAD1 /* SwiftHTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF97F81BFCE48D0053BAD1 /* SwiftHTTP.framework */; };
 		0FFF981E1BFCE4E40053BAD1 /* JSONJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFF98161BFCE4A30053BAD1 /* JSONJoy.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		0F90ADA61BF854160065A2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F90ADA81BF854160065A2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F90ADAA1BF854160065A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FA2B1A31C18EDFE0017242D /* AGOResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGOResponses.swift; sourceTree = "<group>"; };
+		0FA2B1A51C18F66C0017242D /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		0FFF97F01BFCE48D0053BAD1 /* SwiftHTTP.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftHTTP.xcodeproj; path = SwiftHTTP/SwiftHTTP.xcodeproj; sourceTree = "<group>"; };
 		0FFF980E1BFCE4A30053BAD1 /* JSONJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSONJoy.xcodeproj; path = "SwiftHTTP/../JSONJoy-Swift/JSONJoy.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,8 +148,10 @@
 				0F90AD9F1BF854160065A2BC /* AppDelegate.swift */,
 				0F90ADA11BF854160065A2BC /* FirstViewController.swift */,
 				0F90ADA31BF854160065A2BC /* SecondViewController.swift */,
+				0FA2B1A51C18F66C0017242D /* ItemTableViewCell.swift */,
 				0F463AB11BFCFB2E008F0BFC /* LoginViewController.swift */,
 				0F463ABB1BFD2D3B008F0BFC /* APIResponses.swift */,
+				0FA2B1A31C18EDFE0017242D /* AGOResponses.swift */,
 				0F90ADA51BF854160065A2BC /* Main.storyboard */,
 				0F90ADA81BF854160065A2BC /* Assets.xcassets */,
 				0F90ADAA1BF854160065A2BC /* Info.plist */,
@@ -327,7 +333,9 @@
 			files = (
 				0F463AB21BFCFB2E008F0BFC /* LoginViewController.swift in Sources */,
 				0F90ADA41BF854160065A2BC /* SecondViewController.swift in Sources */,
+				0FA2B1A41C18EDFE0017242D /* AGOResponses.swift in Sources */,
 				0F463ABA1BFD1A63008F0BFC /* Config.swift in Sources */,
+				0FA2B1A61C18F66C0017242D /* ItemTableViewCell.swift in Sources */,
 				0F90ADA01BF854160065A2BC /* AppDelegate.swift in Sources */,
 				0F90ADA21BF854160065A2BC /* FirstViewController.swift in Sources */,
 				0F463ABC1BFD2D3B008F0BFC /* APIResponses.swift in Sources */,

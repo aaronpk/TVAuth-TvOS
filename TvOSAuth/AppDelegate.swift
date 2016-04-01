@@ -9,6 +9,8 @@
 import UIKit
 
 let kAccessTokenDefaults = "access_token"
+let kUsernameDefaults = "username"
+let kLoginCompleted = "login_completed"
 
 
 @UIApplicationMain
